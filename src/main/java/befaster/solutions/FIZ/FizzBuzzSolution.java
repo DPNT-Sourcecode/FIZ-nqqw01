@@ -4,9 +4,9 @@ public class FizzBuzzSolution {
 
     public String fizzBuzz(Integer number) {
     	
-    	String value = "";
-    	boolean isFizz = number % 3 == 0;
-    	boolean isBuzz = number % 5 == 0;
+    	String value = number.toString();
+    	boolean isFizz = number % 3 == 0 || value.contains("3");
+    	boolean isBuzz = number % 5 == 0 || value.contains("5");
 		if(isFizz) {
     		value = "fizz";
     	}
@@ -16,8 +16,9 @@ public class FizzBuzzSolution {
     		}
     		value += "buzz";
     	}
-    	return (isFizz || isBuzz) ? value : number.toString();
+    	return value;
     }
 }
+
 
 
