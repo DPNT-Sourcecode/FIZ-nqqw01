@@ -57,5 +57,3 @@ public class FizzBuzzSolutionTest {
 		assertThat(solution.fizzBuzz(22), is(equalTo("deluxe")));
 	}
 }
-
-

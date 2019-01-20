@@ -6,8 +6,10 @@ public class FizzBuzzSolution {
     	
     	String value = number.toString();
     	String retVal = "";
-    	boolean isFizz = number % 3 == 0 || value.contains("3");
-    	boolean isBuzz = number % 5 == 0 || value.contains("5");
+    	boolean isDivisibleBy3 = number % 3 == 0;
+		boolean isFizz = isDivisibleBy3 || value.contains("3");
+    	boolean isDivisibleBy5 = number % 5 == 0;
+		boolean isBuzz = isDivisibleBy5 || value.contains("5");
     	boolean isDeluxe = number > 10 && allDigitsIdentical(value);
 		if(isFizz) {
 			retVal = "fizz";
@@ -43,6 +45,3 @@ public class FizzBuzzSolution {
 		return retVal;
 	}
 }
-
-
-
