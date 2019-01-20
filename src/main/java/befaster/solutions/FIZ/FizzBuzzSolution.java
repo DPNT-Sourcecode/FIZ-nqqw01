@@ -18,6 +18,9 @@ public class FizzBuzzSolution {
     	}
 		if(isDeluxe) {
     		retVal = addSpaceToNonEmptyString(retVal);
+    		if(number % 2 == 1) {
+    			retVal += "fake ";
+    		}
     		retVal += "deluxe";
 		}
     	return (isFizz || isBuzz || isDeluxe) ? retVal : value;
@@ -40,5 +43,6 @@ public class FizzBuzzSolution {
 		return retVal;
 	}
 }
+
 
 
