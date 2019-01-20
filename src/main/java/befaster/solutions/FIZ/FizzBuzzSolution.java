@@ -23,6 +23,16 @@ public class FizzBuzzSolution {
     	return (isFizz || isBuzz || isDeluxe) ? retVal : value;
     }
 
+	private boolean allDigitsIdentical(String value) {
+		char first = value.charAt(0);
+		for(int i = 1; i < value.length(); i++) {
+			if(first != value.charAt(i)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
 	private String addSpaceToNonEmptyString(String retVal) {
 		if(retVal.length() != 0) {
 			retVal += " ";
@@ -30,4 +40,5 @@ public class FizzBuzzSolution {
 		return retVal;
 	}
 }
+
 
