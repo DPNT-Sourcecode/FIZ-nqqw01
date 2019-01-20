@@ -5,16 +5,19 @@ public class FizzBuzzSolution {
     public String fizzBuzz(Integer number) {
     	
     	String value = "";
-    	if(number % 3 == 0) {
+    	boolean isFizz = number % 3 == 0;
+    	boolean isBuzz = number % 5 == 0;
+		if(isFizz) {
     		value = "fizz";
     	}
-    	if(number % 5 == 0) {
+		if(isBuzz) {
     		if(value.length() != 0) {
     			value += " ";
     		}
     		value += "buzz";
     	}
-    	return number.toString();
+    	return (isFizz || isBuzz) ? value : number.toString();
     }
 }
+
 
