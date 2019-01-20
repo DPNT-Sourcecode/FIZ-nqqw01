@@ -7,10 +7,15 @@ public class FizzBuzzSolution {
     	String value = number.toString();
     	String retVal = "";
     	boolean isDivisibleBy3 = number % 3 == 0;
-		boolean isFizz = isDivisibleBy3 || value.contains("3");
     	boolean isDivisibleBy5 = number % 5 == 0;
-		boolean isBuzz = isDivisibleBy5 || value.contains("5");
-    	boolean isDeluxe = number > 10 && allDigitsIdentical(value);
+		boolean contains3 = value.contains("3");
+		boolean contains5 = value.contains("5");
+
+		boolean isFizz = isDivisibleBy3 || contains3;
+		boolean isBuzz = isDivisibleBy5 || contains5;
+		
+    	boolean isDeluxe = (isDivisibleBy3 && contains3) || (isDivisibleBy5 && contains5);
+    	
 		if(isFizz) {
 			retVal = "fizz";
     	}
@@ -45,3 +50,4 @@ public class FizzBuzzSolution {
 		return retVal;
 	}
 }
+
