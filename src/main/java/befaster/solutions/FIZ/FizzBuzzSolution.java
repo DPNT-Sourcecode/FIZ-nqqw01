@@ -20,7 +20,3 @@ public class FizzBuzzSolution {
     	return (isFizz || isBuzz) ? retVal : value;
     }
 }
-
-
-
-

@@ -28,10 +28,22 @@ public class FizzBuzzSolutionTest {
 		
 		MatcherAssert.assertThat(solution.fizzBuzz(5), is(equalTo("buzz")));
 	}
-	
+
 	@Test
 	public void fifteen() {
 		
 		MatcherAssert.assertThat(solution.fizzBuzz(15), is(equalTo("fizz buzz")));
+	}
+
+	@Test
+	public void containsFive() {
+		
+		MatcherAssert.assertThat(solution.fizzBuzz(52), is(equalTo("buzz")));
+	}
+
+	@Test
+	public void fiveHundred() {
+		
+		MatcherAssert.assertThat(solution.fizzBuzz(500), is(equalTo("buzz")));
 	}
 }
